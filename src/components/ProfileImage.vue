@@ -2,7 +2,7 @@
   <img
     :src="imageLink"
     class="h-8 w-8 rounded-3xl object-cover"
-    alt="profile image"
+    alt="User profile image"
   />
 </template>
 
