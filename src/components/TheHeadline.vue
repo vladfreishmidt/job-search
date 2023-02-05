@@ -10,11 +10,14 @@
 </template>
 
 <script>
+import nextElementInList from "@/utils/nextElementInList.js";
+
 export default {
   name: "TheHeadline",
   data() {
     return {
       action: "Build",
+
       interval: null,
     };
   },
@@ -35,10 +38,7 @@ export default {
     changeTitle() {
       this.interval = setInterval(() => {
         const actions = ["Build", "Create", "Design", "Code"];
-        const currecntActionIndex = actions.indexOf(this.action);
-        const nextActionIndex = (currecntActionIndex + 1) % actions.length;
-        const nextAction = actions[nextActionIndex];
-        this.action = nextAction;
+        this.action = nextElementInList(actions, this.action);
       }, 3000);
     },
   },
