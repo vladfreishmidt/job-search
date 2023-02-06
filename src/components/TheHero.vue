@@ -1,19 +1,33 @@
 <template>
   <main>
-    <section class="flex h-screen flex-col bg-yellow-200 pt-10 pb-20">
+    <section class="flex h-screen flex-col pt-10 pb-20">
       <div class="grid grid-cols-12">
-        <div class="col-span-1 col-start-1 border border-blue-700">
-          1 column
-        </div>
-        <div class="col-span-5 col-start-2 border border-blue-700">
+        <div class="col-span-1 col-start-1"></div>
+        <div class="col-span-5 col-start-2">
           <the-headline />
+          <job-search-form />
         </div>
-        <div class="col-span-5 col-start-7 border border-blue-700">
-          5 columns
+        <div
+          class="group relative col-span-5 col-start-7 h-32 w-80 cursor-pointer self-center justify-self-center"
+        >
+          <div
+            class="absolute -bottom-32 -right-10 z-10 h-40 w-40 rounded-full border-[6px] border-blue-400 transition-all group-hover:z-50 group-hover:h-20 group-hover:w-20"
+          ></div>
+
+          <div
+            class="absolute left-0 top-0 z-10 w-80 transition-all group-hover:z-40 group-hover:w-[330px]"
+          >
+            <img
+              class="rounded-full transition-all group-hover:rounded-xl"
+              src="https://images.techopedia.com/images/uploads/web-developer.jpg"
+            />
+          </div>
+
+          <div
+            class="absolute -top-10 -left-10 z-30 h-40 w-40 rounded-full border-[3px] border-orange-400 transition-all group-hover:h-20 group-hover:w-20"
+          ></div>
         </div>
-        <div class="col-span-1 col-start-12 border border-blue-700">
-          1 column
-        </div>
+        <div class="col-span-1 col-start-12"></div>
       </div>
     </section>
   </main>
@@ -21,11 +35,13 @@
 
 <script>
 import TheHeadline from "@/components/TheHeadline.vue";
+import JobSearchForm from "@/components/JobSearchForm.vue";
 
 export default {
   name: "TheHero",
   components: {
     TheHeadline,
+    JobSearchForm,
   },
   data() {
     return {
