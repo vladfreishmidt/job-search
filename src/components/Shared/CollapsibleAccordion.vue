@@ -11,9 +11,7 @@
     </div>
 
     <div v-if="isOpen" class="mt-5 w-full">
-      <slot>
-        <p>Whoops, somebody forgot to populate me!</p>
-      </slot>
+      <slot></slot>
     </div>
   </div>
 </template>
