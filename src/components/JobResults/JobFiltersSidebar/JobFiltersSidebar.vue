@@ -10,19 +10,19 @@
         </div>
       </div>
 
-      <collapsible-accordion />
+      <job-filters-sidebar-organizations />
     </section>
   </div>
 </template>
 <script>
 import ActionButton from "@/components/Shared/ActionButton.vue";
-import CollapsibleAccordion from "@/components/Shared/CollapsibleAccordion.vue";
+import JobFiltersSidebarOrganizations from "@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarOrganizations.vue";
 
 export default {
   name: "JobFiltersSidebar",
   components: {
     ActionButton,
-    CollapsibleAccordion,
+    JobFiltersSidebarOrganizations,
   },
   data() {
     return {
