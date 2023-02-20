@@ -32,3 +32,24 @@ describe("actions", () => {
     });
   });
 });
+
+describe("getters", () => {
+  beforeEach(() => {
+    setActivePinia(createPinia());
+  });
+
+  describe("QUNIQUE_ORGANIZATIONS", () => {
+    it("finds unique organizations from list of jobs", () => {
+      const store = useJobsStore();
+      store.jobs = [
+        { organization: "Google" },
+        { organization: "Amazon" },
+        { organization: "Google" },
+      ];
+
+      const result = store.QUNIQUE_ORGANIZATIONS;
+
+      expect(result).toEqual(new Set(["Google", "Amazon"]));
+    });
+  });
+});
